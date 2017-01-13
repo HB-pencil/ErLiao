@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">中医耳疗</string>
+    <string name="setting">设 置</string>
+    <string name="what">什么是中医耳疗</string>
+    <string name="xuewei">穴位</string>
+    <string name="knowledge">中医耳疗知识</string>
+    <string name="advantage">耳疗优点</string>
+    <string name="culture">中医文化</string>
+    <string name="develop">当代发展</string>
+</resources>
