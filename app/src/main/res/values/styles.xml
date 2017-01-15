@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -10,5 +10,8 @@
     <style name="button" parent="android:style/Widget.Holo.Button">
         <item name="android:textColor">#FFFFFF</item>
         <item name="android:textSize">15dp</item>
+        <item name ="android:gravity">center|bottom</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:background">#00000000</item>
     </style>
 </resources>

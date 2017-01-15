@@ -4,41 +4,61 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-<TableLayout
-    android:layout_height="454dp"
-    android:layout_width="match_parent">
-    <TableRow>
-    <Button
-    android:id="@+id/what_button"
-    android:layout_width="0dp"
-    android:layout_weight="1"
-    android:layout_height="140dp"
-    android:layout_marginTop="10dp"
-    android:layout_marginBottom="2dp"
-    android:layout_marginStart="20dp"
-    android:layout_marginEnd="7dp"
-    android:background="#7F333333"
-    android:text="@string/what"
-    style="@style/button"
-    />
 
-      <Button
-        android:id="@+id/point_button"
+<TableLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_marginTop="20dp">
+    <TableRow>
+    <FrameLayout
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="140dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginBottom="2dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="20dp"
-        android:background="#7F333333"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="7dp"
+        android:background="@color/gray">
+        <Button
+            android:id="@+id/what_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/what"
+            style="@style/button"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/what"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"/>
+    </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="140dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="20dp"
+            android:background="@color/gray">
+        <Button
+        android:id="@+id/point_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:text="@string/xuewei"
         style="@style/button"
         />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ear"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
     </TableRow>
     <TableRow>
-        <Button
-            android:id="@+id/know_button"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
@@ -46,13 +66,23 @@
             android:layout_marginBottom="2dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="7dp"
-            android:background="#7F333333"
+            android:background="@color/gray">
+        <Button
+            android:id="@+id/know_button"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
             android:text="@string/knowledge"
             style="@style/button"
             />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/book"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
 
-        <Button
-            android:id="@+id/good_button"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
@@ -60,14 +90,24 @@
             android:layout_marginBottom="2dp"
             android:layout_marginStart="7dp"
             android:layout_marginEnd="20dp"
-            android:background="#7F333333"
+            android:background="@color/gray">
+        <Button
+            android:id="@+id/good_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/advantage"
             style="@style/button"
             />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/good"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
     </TableRow>
     <TableRow>
-        <Button
-            android:id="@+id/culture_button"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
@@ -75,13 +115,23 @@
             android:layout_marginBottom="2dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="7dp"
+            android:background="@color/gray">
+        <Button
+            android:id="@+id/culture_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/culture"
-            android:background="#7F333333"
             style="@style/button"
             />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/culture"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
 
-        <Button
-            android:id="@+id/develop_button"
+        <FrameLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="140dp"
@@ -89,46 +139,20 @@
             android:layout_marginBottom="2dp"
             android:layout_marginStart="7dp"
             android:layout_marginEnd="20dp"
-            android:background="#7F333333"
+            android:background="@color/gray">
+        <Button
+            android:id="@+id/develop_button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:text="@string/develop"
-            style="@style/button"
-            />
+            style="@style/button"/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/develop"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"/>
+        </FrameLayout>
     </TableRow>
 </TableLayout>
-
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="?attr/colorPrimaryDark">
-    <ImageButton
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:scaleType="center"
-        android:background="@drawable/view"/>
-    <ImageButton
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:scaleType="center"
-        android:background="@drawable/home"/>
-    <ImageButton
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginStart="40dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="match_parent"
-        android:scaleType="center"
-        android:background="@drawable/setting"/>
-</LinearLayout>
 </LinearLayout>

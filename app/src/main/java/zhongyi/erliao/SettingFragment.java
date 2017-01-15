@@ -2,15 +2,15 @@ package zhongyi.erliao;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,13 +19,32 @@ import java.util.List;
  */
 public class SettingFragment extends Fragment {
 
+
     @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
-        View view = inflater.inflate(R.layout.setting_fragment,container);
+
+        /**
+         * I had the same problem when I used
+         View res = inflater.inflate(R.layout.fragment_guide_search, container);
+
+         inside Fragment.onCreateView(...
+
+         You must call
+         View res = inflater.inflate(R.layout.fragment_guide_search, container, false);
+
+         or
+         View res = inflater.inflate(R.layout.fragment_guide_search, null);
+
+         *
+         **/
+        View view = inflater.inflate(R.layout.setting_layoutt,container,false);
+
+
        //使用RecyclerView创建循环列表
         RecyclerView recyclerView = (RecyclerView) view.findViewById(R.id.fragment_recycler);
        //指定列表的布局
-        recyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
        //实例化列表模型层Model的List集合存储的模型对象
         List<SettingItem> items = new ArrayList<>();
        //循环
@@ -41,6 +60,7 @@ public class SettingFragment extends Fragment {
 
         return view;
     }
+
 
     public void setInformation(SettingItem item,int i){
         if(i == 0){
@@ -64,15 +84,17 @@ public class SettingFragment extends Fragment {
     private class TextHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private ImageView mImageView;
         private TextView mTextView;
-        public TextHolder(View view){
-            super(view);
-            view.setOnClickListener(this);
+        public TextHolder(View itemview){
+            super(itemview);
+            itemview.setOnClickListener(this);
             /**View强制转为子类，前提是可转，否则报错，父类强制转为子类不安全，视情况而定。
              * view.findViewById成员方法。Activity.findViewById也一样
              */
-            mImageView = (ImageView) view.findViewById(R.id.image_icon);
-            mTextView = (TextView) view.findViewById(R.id.setting_text);
+            mImageView = (ImageView) itemview.findViewById(R.id.image_icon);
+            mTextView = (TextView) itemview.findViewById(R.id.setting_text);
         }
+
+        //点击ItemView事件
         @Override
         public void onClick(View v){
             Toast.makeText(getActivity(),"点击事件",Toast.LENGTH_SHORT).show();
@@ -83,6 +105,7 @@ public class SettingFragment extends Fragment {
         public TextAdapter(List<SettingItem>  items){
             mItems = items;
         }
+
         @Override
         public TextHolder onCreateViewHolder(ViewGroup viewGroup,int viewType){
             LayoutInflater inflater = LayoutInflater.from(getActivity());

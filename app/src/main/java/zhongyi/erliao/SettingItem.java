@@ -1,9 +1,7 @@
 package zhongyi.erliao;
 
-import android.graphics.drawable.Drawable;
-
 /**
- * Created by dell on 2017/1/13.
+ * Created by dell on 2017/1/13.模型层对象。
  */
 public class SettingItem {
     private String myText;
