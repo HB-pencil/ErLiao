@@ -1,7 +1,9 @@
 package zhongyi.erliao;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
@@ -48,7 +51,7 @@ public class SettingFragment extends Fragment {
        //实例化列表模型层Model的List集合存储的模型对象
         List<SettingItem> items = new ArrayList<>();
        //循环
-        for(int i=0;i<items.size();i++)
+        for(int i=0;i< 6;i++)
         {
             SettingItem item = new SettingItem();
             setInformation(item,i);        //设置列表icon和文字
@@ -64,26 +67,33 @@ public class SettingFragment extends Fragment {
 
     public void setInformation(SettingItem item,int i){
         if(i == 0){
+            item.setmyDrawable(R.drawable.night);
+            item.setMyText("夜间模式");
+        }
+        else if(i == 1){
             item.setmyDrawable(R.drawable.change);
-            item.setMyText("切换主题");
-        }else if(i == 1){
+            item.setMyText("更换背景");
+        }else if(i == 2){
             item.setmyDrawable(R.drawable.size);
             item.setMyText("字体大小");
-        }else if(i == 2){
+        }else if(i == 3){
             item.setmyDrawable(R.drawable.edition);
             item.setMyText("版本信息");
-        }else if(i == 3){
+        }else if(i == 4){
             item.setmyDrawable(R.drawable.about);
             item.setMyText("关于我们");
-        }else if(i == 4){
+        }else if(i == 5){
             item.setmyDrawable(R.drawable.mail);
             item.setMyText("联系我们");
         }
     }
 
     private class TextHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private ImageView mImageView;
-        private TextView mTextView;
+         ImageView mImageView;
+         TextView mTextView;
+         Boolean change = false;
+         Boolean mode = false;
+
         public TextHolder(View itemview){
             super(itemview);
             itemview.setOnClickListener(this);
@@ -97,7 +107,45 @@ public class SettingFragment extends Fragment {
         //点击ItemView事件
         @Override
         public void onClick(View v){
-            Toast.makeText(getActivity(),"点击事件",Toast.LENGTH_SHORT).show();
+            if(mTextView.getText().toString() == "夜间模式"){
+                LinearLayout layouto = (LinearLayout) getActivity().findViewById(R.id.top);
+                layouto.setBackgroundColor(getResources().getColor(R.color.black));
+                LinearLayout layoutt = (LinearLayout) getActivity().findViewById(R.id.bottom);
+                layoutt.setBackgroundColor(getResources().getColor(R.color.black));
+                mode = true;
+                mTextView.setText("日间模式");
+
+            }else if (mTextView.getText().toString() =="日间模式"){
+                LinearLayout layouto = (LinearLayout) getActivity().findViewById(R.id.top);
+                layouto.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                LinearLayout layoutt = (LinearLayout) getActivity().findViewById(R.id.bottom);
+                layoutt.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
+                mode = false;
+                mTextView.setText("夜间模式");
+
+            }else if(mTextView.getText().toString() =="更换背景"){
+
+                   if(change == false){
+                       Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.backo);
+                       LinearLayout layout = (LinearLayout) getActivity().findViewById(R.id.back);
+                       layout.setBackground(drawable);
+                       change = true;
+                   }else{
+                       Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.back);
+                       LinearLayout layout = (LinearLayout) getActivity().findViewById(R.id.back);
+                       layout.setBackground(drawable);
+                   }
+
+
+            }else if(mTextView.getText().toString() =="字体大小"){
+
+            }else if(mTextView.getText().toString() =="版本信息"){
+
+            }else if(mTextView.getText().toString() =="关于我们"){
+
+            }else if(mTextView.getText().toString() =="联系我们"){
+
+            }
         }
     }
     private class TextAdapter extends RecyclerView.Adapter<TextHolder>{

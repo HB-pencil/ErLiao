@@ -5,13 +5,11 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.view.View;
-import android.widget.ImageButton;
 
 /**
  * Created by dell on 2017/1/12.抽象托管Activity。通过点击底部菜单栏来切换不同Fragment。
  */
-public abstract class SingleActivity extends FragmentActivity{
+public abstract class SingleActivity extends FragmentActivity {
 
     public abstract Fragment createFragment();
 
@@ -33,4 +31,6 @@ public abstract class SingleActivity extends FragmentActivity{
         }
 
     }
+
+
 }

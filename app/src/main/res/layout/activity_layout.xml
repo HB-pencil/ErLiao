@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout
-              xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+              android:id="@+id/back"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:background="@drawable/back">
     <LinearLayout
+        android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -16,17 +22,18 @@
             android:text="@string/cure"
             android:textColor="#FFFFFF"
             android:gravity="center"
-            android:textSize="22dp"/>
+            android:textSize="22sp"/>
     </LinearLayout>
     <FrameLayout
         android:id="@+id/activity_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9.5">
+        android:layout_weight="10">
 
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/bottom"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
@@ -40,7 +47,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:background="@drawable/vbutton_state"/>
             <ImageButton
                 android:id="@+id/home_button"
@@ -51,7 +58,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:background="@drawable/hbutton_state"/>
             <ImageButton
                 android:id="@+id/setting_button"
@@ -62,8 +69,9 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="match_parent"
-                android:scaleType="center"
+                android:scaleType="fitCenter"
                 android:background="@drawable/sbutton_state"/>
-
     </LinearLayout>
-</LinearLayout>
+   </LinearLayout>
+
+  </LinearLayout>

@@ -1,8 +1,8 @@
 package zhongyi.erliao;
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 /**
  *主页托管Activity，设置按钮触发事件
@@ -69,6 +69,14 @@ public class HomeActivity extends SingleActivity implements View.OnClickListener
         }
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent= new Intent(Intent.ACTION_MAIN);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        startActivity(intent);
     }
 
 }
