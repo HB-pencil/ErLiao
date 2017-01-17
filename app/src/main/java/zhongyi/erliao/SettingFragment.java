@@ -1,6 +1,9 @@
 package zhongyi.erliao;
 
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.content.ContextCompat;
@@ -9,6 +12,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -67,7 +71,7 @@ public class SettingFragment extends Fragment {
 
     public void setInformation(SettingItem item,int i){
         if(i == 0){
-            item.setmyDrawable(R.drawable.night);
+            item.setmyDrawable(R.drawable.day);
             item.setMyText("夜间模式");
         }
         else if(i == 1){
@@ -113,6 +117,7 @@ public class SettingFragment extends Fragment {
                 LinearLayout layoutt = (LinearLayout) getActivity().findViewById(R.id.bottom);
                 layoutt.setBackgroundColor(getResources().getColor(R.color.black));
                 mode = true;
+                mImageView.setImageResource(R.drawable.night);
                 mTextView.setText("日间模式");
 
             }else if (mTextView.getText().toString() =="日间模式"){
@@ -122,6 +127,8 @@ public class SettingFragment extends Fragment {
                 layoutt.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 mode = false;
                 mTextView.setText("夜间模式");
+                mImageView.setImageResource(R.drawable.day);
+
 
             }else if(mTextView.getText().toString() =="更换背景"){
 
@@ -145,6 +152,16 @@ public class SettingFragment extends Fragment {
 
             }else if(mTextView.getText().toString() =="联系我们"){
 
+                Intent intent = new Intent(Intent.ACTION_SENDTO);
+
+                intent.setData(Uri.parse("mailto:HardBlack@126.com"));
+
+                /**
+                 * intent.setType("message/rfc822") ; // use from live device
+                 * intent.putExtra(Intent.EXTRA_EMAIL, new String[]{"HardBlack@126.com"});
+                 * 这两种方法效果一样，不知道为什么没有弹出选择器
+                 **/
+                startActivity(Intent.createChooser(intent,"Select a Application"));
             }
         }
     }
