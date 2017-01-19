@@ -1,5 +1,7 @@
 package zhongyi.erliao;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -49,37 +51,38 @@ public class HomeFragment extends Fragment implements View.OnClickListener{
         switch( v.getId() ){
             case R.id.what_button:
             {
-               Toast.makeText(getActivity(),"Click",Toast.LENGTH_SHORT).show();
+                Intent intent = WhatActivity.newInstance(getActivity());
+                startActivity(intent);
             }
             break;
             case R.id.point_button:
-            {}
+            {
+                Intent intent = PointActivity.newInstance(getActivity());
+                startActivity(intent);
+            }
             break;
             case R.id.know_button:
-            {}
+            {
+                Intent intent = KnowActivity.newInstance(getActivity());
+                startActivity(intent);
+            }
             break;
             case R.id.good_button:
-            {}
+            {
+                Intent intent = GoodActivity.newInstance(getActivity());
+                startActivity(intent);
+            }
             break;
             case R.id.culture_button:
-            {}
+            {
+                Intent intent = CultureActivity.newInstance(getActivity());
+                startActivity(intent);
+            }
             break;
             case R.id.develop_button:
-            {}
-            break;
-            case R.id.view_button:
             {
-
-            }
-            break;
-            case R.id.home_button:
-            {
-                Toast.makeText(getActivity(),"已在主界面",Toast.LENGTH_SHORT).show();
-            }
-            break;
-            case R.id.setting_button:
-            {
-
+                Intent intent = DevelopActivity.newInstance(getActivity());
+                startActivity(intent);
             }
             break;
         }

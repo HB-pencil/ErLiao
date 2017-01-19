@@ -1,5 +1,6 @@
 package zhongyi.erliao;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
@@ -111,7 +112,7 @@ public class SettingFragment extends Fragment {
         //点击ItemView事件
         @Override
         public void onClick(View v){
-            if(mTextView.getText().toString() == "夜间模式"){
+            if(mTextView.getText().toString().equals("夜间模式")){
                 LinearLayout layouto = (LinearLayout) getActivity().findViewById(R.id.top);
                 layouto.setBackgroundColor(getResources().getColor(R.color.black));
                 LinearLayout layoutt = (LinearLayout) getActivity().findViewById(R.id.bottom);
@@ -120,7 +121,7 @@ public class SettingFragment extends Fragment {
                 mImageView.setImageResource(R.drawable.night);
                 mTextView.setText("日间模式");
 
-            }else if (mTextView.getText().toString() =="日间模式"){
+            }else if (mTextView.getText().toString().equals("日间模式")){
                 LinearLayout layouto = (LinearLayout) getActivity().findViewById(R.id.top);
                 layouto.setBackgroundColor(getResources().getColor(R.color.colorPrimaryDark));
                 LinearLayout layoutt = (LinearLayout) getActivity().findViewById(R.id.bottom);
@@ -130,9 +131,9 @@ public class SettingFragment extends Fragment {
                 mImageView.setImageResource(R.drawable.day);
 
 
-            }else if(mTextView.getText().toString() =="更换背景"){
+            }else if(mTextView.getText().toString().equals("更换背景")){
 
-                   if(change == false){
+                   if(!change){
                        Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.backo);
                        LinearLayout layout = (LinearLayout) getActivity().findViewById(R.id.back);
                        layout.setBackground(drawable);
@@ -144,13 +145,16 @@ public class SettingFragment extends Fragment {
                    }
 
 
-            }else if(mTextView.getText().toString() =="字体大小"){
+            }else if(mTextView.getText().toString().equals("字体大小")){
 
-            }else if(mTextView.getText().toString() =="版本信息"){
+            }else if(mTextView.getText().toString().equals("版本信息")){
+                Intent intent= EditionActivity.newInstance(getActivity());
+                startActivity(intent);
+            }else if(mTextView.getText().toString().equals("关于我们")){
+                Intent intent= AboutActivity.newInstance(getActivity());
+                startActivity(intent);
 
-            }else if(mTextView.getText().toString() =="关于我们"){
-
-            }else if(mTextView.getText().toString() =="联系我们"){
+            }else if(mTextView.getText().toString().equals("联系我们")){
 
                 Intent intent = new Intent(Intent.ACTION_SENDTO);
 

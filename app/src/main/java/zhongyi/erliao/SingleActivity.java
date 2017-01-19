@@ -16,7 +16,7 @@ public abstract class SingleActivity extends FragmentActivity {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_layout);
+        setContentView(getLayoutResId());
 
 
         //托管Fragment
@@ -31,6 +31,9 @@ public abstract class SingleActivity extends FragmentActivity {
         }
 
     }
+
+    //根据不同的Activity实行不同的布局
+    protected abstract int getLayoutResId();
 
 
 }

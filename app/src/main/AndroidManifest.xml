@@ -15,6 +15,22 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".AboutActivity">
+        </activity>
+        <activity android:name=".EditionActivity">
+        </activity>
+        <activity android:name=".DevelopActivity">
+        </activity>
+        <activity android:name=".CultureActivity">
+        </activity>
+        <activity android:name=".KnowActivity">
+        </activity>
+        <activity android:name=".WhatActivity">
+        </activity>
+        <activity android:name=".PointActivity">
+        </activity>
+        <activity android:name=".GoodActivity">
+        </activity>
 
     </application>
 

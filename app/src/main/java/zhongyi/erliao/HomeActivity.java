@@ -31,6 +31,11 @@ public class HomeActivity extends SingleActivity implements View.OnClickListener
     }
 
     @Override
+    protected  int getLayoutResId(){
+        return R.layout.activity_layout;
+    }
+
+    @Override
     public void onClick(View view){
 
         //根据不同对象切换不同fragment
