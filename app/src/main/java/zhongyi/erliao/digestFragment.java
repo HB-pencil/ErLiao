@@ -1,6 +1,5 @@
 package zhongyi.erliao;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -9,31 +8,38 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dell on 2017/1/18.
+ * Created by dell on 2017/2/1.消化系统疾病fragment。
  */
-public class KnowFragment extends Fragment {
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.all_list_fragment_item,viewGroup,false);
+public class digestFragment extends Fragment {
 
-        //一级RecyclerView;
+    @Override
+    public View onCreateView(LayoutInflater layout, ViewGroup viewGroup,Bundle savedInstanceState){
+          View view = layout.inflate(R.layout.all_list_fragment_item,viewGroup,false);
+        //二级RecyclerView;
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.one);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //模型层
         List<String> mList = new ArrayList<>();
-        mList.add("第一节 内科疾病");
-        mList.add("第二节 外科疾病");
-        mList.add("第三节 五官科疾病");
-        mList.add("第四节 妇科疾病");
-        mList.add("第五节 皮肤病");
-        mList.add("第六节 耳穴防病");
+        mList.add("胃炎");
+        mList.add("胃、十二指肠溃疡");
+        mList.add("十二指肠球炎");
+        mList.add("急性胃肠炎");
+        mList.add("胰腺炎");
+        mList.add("便秘");
+        mList.add("腹泻");
+        mList.add("反酸、恶心");
+        mList.add("膈肌痉挛(呃逆)");
+        mList.add("食管炎");
+        mList.add("胃肠功能紊乱");
+        mList.add("消化不良");
+        mList.add("慢性肝炎");
+        mList.add("肝炎后综合症");
+
 
         //适配器
         MyAdapter adapter = new MyAdapter(mList);
@@ -43,26 +49,15 @@ public class KnowFragment extends Fragment {
     }
 
 
-    private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    private class MyViewHolder extends RecyclerView.ViewHolder{
 
-         TextView mTextView;
+        TextView mTextView;
 
-         public MyViewHolder(View itemView){
-             super(itemView);
-             itemView.setOnClickListener(this);
+        public MyViewHolder(View itemView){
+            super(itemView);
             mTextView = (TextView) itemView;
         }
 
-        @Override
-        public void onClick(View view){
-            if(mTextView.getText().toString().equals("第一节 内科疾病")){
-               Intent intent = digestionActivity.newInstance(getActivity());
-               startActivity(intent);
-
-            }else{
-                Toast.makeText(getActivity(),"Click",Toast.LENGTH_SHORT).show();
-            }
-        }
 
     }
 
@@ -92,4 +87,5 @@ public class KnowFragment extends Fragment {
             return mList.size();
         }
     }
+
 }

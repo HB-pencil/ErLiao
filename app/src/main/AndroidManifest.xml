@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".GoodActivity">
         </activity>
+        <activity android:name=".digestionActivity">
+        </activity>
 
     </application>
 
