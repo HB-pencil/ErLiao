@@ -40,8 +40,8 @@
             android:background="?attr/colorPrimaryDark">
             <ImageButton
                 android:id="@+id/view_button"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
                 android:layout_marginEnd="41dp"
                 android:layout_marginStart="41dp"
                 android:layout_width="0dp"
@@ -51,8 +51,8 @@
                 android:background="@drawable/vbutton_state"/>
             <ImageButton
                 android:id="@+id/home_button"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
                 android:layout_marginEnd="42dp"
                 android:layout_marginStart="42dp"
                 android:layout_width="0dp"
@@ -62,8 +62,8 @@
                 android:background="@drawable/hbutton_state"/>
             <ImageButton
                 android:id="@+id/setting_button"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="8dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="6dp"
                 android:layout_marginEnd="41dp"
                 android:layout_marginStart="42dp"
                 android:layout_width="0dp"
