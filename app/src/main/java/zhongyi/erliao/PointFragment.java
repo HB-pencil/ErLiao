@@ -12,7 +12,7 @@ import android.view.ViewGroup;
 public class PointFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.item_fragment_layout,viewGroup,false);
+        View view = inflater.inflate(R.layout.point_item_fragment_layout,viewGroup,false);
 
         return view;
     }
