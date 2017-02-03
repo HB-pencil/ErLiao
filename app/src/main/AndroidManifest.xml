@@ -31,7 +31,29 @@
         </activity>
         <activity android:name=".GoodActivity">
         </activity>
+        <activity android:name=".neikeActivity">
+        </activity>
+        <activity android:name=".breathActivity">
+        </activity>
         <activity android:name=".digestionActivity">
+        </activity>
+        <activity android:name=".circleActivity">
+        </activity>
+        <activity android:name=".nerveActivity">
+        </activity>
+        <activity android:name=".incretionActivity">
+        </activity>
+        <activity android:name=".urinationActivity">
+        </activity>
+        <activity android:name=".waikeActivity">
+        </activity>
+        <activity android:name=".organsActivity">
+        </activity>
+        <activity android:name=".gynaecologyActivity">
+        </activity>
+        <activity android:name=".skinActivity">
+        </activity>
+        <activity android:name=".precautionActivity">
         </activity>
 
     </application>

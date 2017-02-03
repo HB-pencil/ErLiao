@@ -1,6 +1,4 @@
 package zhongyi.erliao;
-
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -16,25 +14,26 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dell on 2017/1/18.耳疗知识内容
+ * Created by dell on 2017/2/2.内科疾病界面
  */
-public class KnowFragment extends Fragment {
+public class neikeFragment extends Fragment {
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup viewGroup, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.all_list_fragment_item,viewGroup,false);
 
-        //一级RecyclerView;
+        //二级RecyclerView;
         RecyclerView mRecyclerView = (RecyclerView) view.findViewById(R.id.recycler);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         //模型层
         List<String> mList = new ArrayList<>();
-        mList.add("第一节 内科疾病");
-        mList.add("第二节 外科疾病");
-        mList.add("第三节 五官科疾病");
-        mList.add("第四节 妇科疾病");
-        mList.add("第五节 皮肤病");
-        mList.add("第六节 耳穴防病");
+        mList.add("消化系统疾病");
+        mList.add("呼吸系统疾病");
+        mList.add("循环系统疾病");
+        mList.add("神经、精神系统疾病");
+        mList.add("内分泌系统疾病");
+        mList.add("泌尿系统疾病");
 
         //适配器
         MyAdapter adapter = new MyAdapter(mList);
@@ -42,41 +41,37 @@ public class KnowFragment extends Fragment {
 
         return view;
     }
-
-
     private class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
-         TextView mTextView;
+        TextView mTextView;
 
-         public MyViewHolder(View itemView){
-             super(itemView);
-             itemView.setOnClickListener(this);
+        public MyViewHolder(View itemView){
+            super(itemView);
+            itemView.setOnClickListener(this);
             mTextView = (TextView) itemView;
         }
 
         @Override
         public void onClick(View view){
-            if(mTextView.getText().toString().equals("第一节 内科疾病")){
-               Intent intent = neikeActivity.newInstance(getActivity());
-               startActivity(intent);
-
-            }else if(mTextView.getText().toString().equals("第二节 外科疾病")){
-                Intent intent = waikeActivity.newInstance(getActivity());
+            if(mTextView.getText().toString().equals("消化系统疾病")){
+                Intent intent = digestionActivity.newInstance(getActivity());
                 startActivity(intent);
-            }else if(mTextView.getText().toString().equals("第三节 五官科疾病")){
-                Intent intent = organsActivity.newInstance(getActivity());
+            }else if(mTextView.getText().toString().equals("呼吸系统疾病")){
+                Intent intent = breathActivity.newInstance(getActivity());
                 startActivity(intent);
-            }else if(mTextView.getText().toString().equals("第四节 妇科疾病")){
-                Intent intent = gynaecologyActivity.newInstance(getActivity());
+            }else if(mTextView.getText().toString().equals("循环系统疾病")){
+                Intent intent = circleActivity.newInstance(getActivity());
                 startActivity(intent);
-            }else if(mTextView.getText().toString().equals("第五节 皮肤病")){
-                Intent intent = skinActivity.newInstance(getActivity());
+            }else if(mTextView.getText().toString().equals("神经、精神系统疾病")){
+                Intent intent = nerveActivity.newInstance(getActivity());
                 startActivity(intent);
-            }else if(mTextView.getText().toString().equals("第六节 耳穴防病")){
-                Intent intent = precautionActivity.newInstance(getActivity());
+            }else if(mTextView.getText().toString().equals("内分泌系统疾病")){
+                Intent intent = incretionActivity.newInstance(getActivity());
                 startActivity(intent);
-            }
-            else{
+            }else if(mTextView.getText().toString().equals("泌尿系统疾病")){
+                Intent intent = circleActivity.newInstance(getActivity());
+                startActivity(intent);
+            }else{
                 Toast.makeText(getActivity(),"Click",Toast.LENGTH_SHORT).show();
             }
         }
@@ -109,4 +104,5 @@ public class KnowFragment extends Fragment {
             return mList.size();
         }
     }
+
 }
