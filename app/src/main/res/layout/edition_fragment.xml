@@ -17,6 +17,8 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
+        android:text="Version:BetaVersion1.0"
+        android:gravity="center"
         android:textSize="15sp"/>
 
 </LinearLayout>

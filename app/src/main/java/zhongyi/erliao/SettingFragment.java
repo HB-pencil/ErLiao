@@ -11,9 +11,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -130,18 +133,18 @@ public class SettingFragment extends Fragment {
 
                    if(!change){
                        Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.backo);
-                       LinearLayout layout = (LinearLayout) getActivity().findViewById(R.id.back);
+                       FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.activity_container);
                        layout.setBackground(drawable);
                        change = true;
                    }else{
                        Drawable drawable = ContextCompat.getDrawable(getActivity(), R.drawable.back);
-                       LinearLayout layout = (LinearLayout) getActivity().findViewById(R.id.back);
+                       FrameLayout layout = (FrameLayout) getActivity().findViewById(R.id.activity_container);
                        layout.setBackground(drawable);
                    }
 
 
             }else if(mTextView.getText().toString().equals("字体大小")){
-
+                Toast.makeText(getActivity(),"敬请期待！",Toast.LENGTH_SHORT).show();
             }else if(mTextView.getText().toString().equals("版本信息")){
                 Intent intent= EditionActivity.newInstance(getActivity());
                 startActivity(intent);

@@ -17,6 +17,7 @@
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_width="match_parent"
+        android:text="广州中医药大学大学生创业创新实践项目作品"
         android:textSize="15sp"/>
 
 </LinearLayout>
