@@ -9,55 +9,62 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity" android:configChanges="orientation|keyboardHidden|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity">
+        <activity android:name=".HomeActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".AboutActivity">
+        <activity android:name=".AboutActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".EditionActivity">
+        <activity android:name=".EditionActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".DevelopActivity">
+        <activity android:name=".DevelopActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".CultureActivity">
+        <activity android:name=".CultureActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".KnowActivity">
+        <activity android:name=".KnowActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".WhatActivity">
+        <activity android:name=".WhatActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".PointActivity">
+        <activity android:name=".PointActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".GoodActivity">
+        <activity android:name=".GoodActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".neikeActivity">
+        <activity android:name=".neikeActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".breathActivity">
+        <activity android:name=".breathActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".digestionActivity">
+        <activity android:name=".digestionActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".circleActivity">
+        <activity android:name=".circleActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".nerveActivity">
+        <activity android:name=".nerveActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".incretionActivity">
+        <activity android:name=".incretionActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".urinationActivity">
+        <activity android:name=".urinationActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".waikeActivity">
+        <activity android:name=".waikeActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".organsActivity">
+        <activity android:name=".organsActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".gynaecologyActivity">
+        <activity android:name=".gynaecologyActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".skinActivity">
+        <activity android:name=".skinActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-        <activity android:name=".precautionActivity">
+        <activity android:name=".precautionActivity" android:configChanges="orientation|keyboardHidden|screenSize">
         </activity>
-
+        <activity android:name=".pointIntroduce" android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".pointOperation" android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".pointNotice" android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
+        <activity android:name=".pointTheory" android:configChanges="orientation|keyboardHidden|screenSize">
+        </activity>
     </application>
 
 </manifest>

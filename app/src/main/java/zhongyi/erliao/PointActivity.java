@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 /**
- * Created by dell on 2017/1/19.
+ * Created by dell on 2017/1/19.耳穴Activity
  */
 public class PointActivity extends SingleActivity {
     @Override
