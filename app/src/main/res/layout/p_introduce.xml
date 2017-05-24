@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="11">
-            <LinearLayou
+            <LinearLayout
                 android:orientation="vertical"
                 android:layout_marginStart="10dp"
                 android:layout_marginEnd="10dp"
@@ -71,7 +71,7 @@
                     android:text="@string/what_method"
                     android:textSize="15sp"/>
 
-            </LinearLayou>
+            </LinearLayout>
         </FrameLayout>
 
         <LinearLayout
